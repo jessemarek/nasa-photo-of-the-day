@@ -3,7 +3,7 @@ import React from 'react'
 const DropDownList = props =>{
 
     return(
-        <div>
+        <div className='dropdown'>
             <label>Choose a date:</label>
 
             <select onChange={props.onChange}>

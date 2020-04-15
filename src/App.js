@@ -14,10 +14,11 @@ const api_key = 'drf7kPzOSXRGiQ98Bo9Fin8gfGZdVp14nLjjmkcR'
 
 function App() {
 
-  //State that will hold the image data we will be using
+  //State that will hold the image data and image date we will be using
   const [imageData, setImageData] = useState(null)
   const [imageDate, setImageDate] = useState('2020-04-15')
 
+  //watches for the select dropdown to change and then sets the imageDate accordingly
   const changeHandler = event => setImageDate(event.target.value)
 
   useEffect(()=>{
