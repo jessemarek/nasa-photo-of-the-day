@@ -1,0 +1,28 @@
+.image-card{
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 2%;
+    background: #ccc;
+}
+
+.image-card img{
+    margin: 5%;
+}
+
+.card-title{
+    margin: 0 auto;
+    font-size: 2.4rem;
+}
+
+.img-text{
+    margin: 5% 0;
+    text-align: justify;
+    font-size: 1.6rem;
+}
+
+.copyright{
+    text-align: left;
+    font-size: 1.2rem;
+}
