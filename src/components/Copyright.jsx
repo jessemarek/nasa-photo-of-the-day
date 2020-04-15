@@ -5,7 +5,7 @@ const Copyright = props =>{
     const { copyright, date } = props.copyright
 
     return(
-        <p className='copyright'>Photo by {copyright}  ©{date}</p>
+        copyright && <p className='copyright'>Photo by {copyright}  ©{date}</p>
     )
 }
 
