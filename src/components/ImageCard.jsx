@@ -4,13 +4,12 @@ import Copyright from './Copyright'
 
 
 const ImageCard = props => {
-    const { title, url, explanation, copyright, date } = props.imageData
 
     return (
         <div className='image-card'>
+            {/*Pass the necessary props off to the components*/}
             <ImageBody imageData={props.imageData} />
-            
-            <Copyright copyright={copyright} date={date} />
+            <Copyright copyright={props.imageData} />
         </div>
     )
 } 
