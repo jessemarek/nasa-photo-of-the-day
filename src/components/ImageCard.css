@@ -18,9 +18,12 @@
 }
 
 .img-text{
+    max-height: 26vh;
     margin: 5% 0;
+    padding: 0 4%;
     text-align: justify;
     font-size: 1.6rem;
+    overflow: auto;
 }
 
 .copyright{

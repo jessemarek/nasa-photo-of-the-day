@@ -1,4 +1,6 @@
 import React from 'react'
+import ImageBody from './ImageBody'
+import Copyright from './Copyright'
 
 
 const ImageCard = props => {
@@ -6,14 +8,9 @@ const ImageCard = props => {
 
     return (
         <div className='image-card'>
+            <ImageBody imageData={props.imageData} />
             
-            <h3 className='card-title'>{title}</h3>
-            <div>
-                <img src={url} alt='from NASA' />
-                <p className='img-text'>{explanation}</p>
-            </div>
-            
-            <p className='copyright'>Photo by {copyright}  ©{date}</p>
+            <Copyright copyright={copyright} date={date} />
         </div>
     )
 } 
