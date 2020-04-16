@@ -5,8 +5,6 @@ import axios from 'axios'
 
 //Import styles
 import "./App.css";
-import './components/ImageCard.css'
-import './components/DropDownList.css'
 
 //BAse URL and my API key for NASA APOD
 const baseURL = 'https://api.nasa.gov'

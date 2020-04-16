@@ -1,4 +1,26 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const CardBody = styled.div`
+    img{
+        width: 90%;
+        margin: 5% auto;
+    }
+
+    h3{
+        margin: 0 auto;
+        font-size: 2.4rem;
+    }
+
+    p{
+        max-height: 26vh;
+        margin: 5% 0;
+        padding: 0 4%;
+        text-align: justify;
+        font-size: 1.6rem;
+        overflow: auto;
+    }
+`
 
 const ImageBody = props =>{
     //Destructure the data obj into the pieces we need for this component
@@ -6,12 +28,11 @@ const ImageBody = props =>{
 
     return(
 
-        <div className='card-body'>
+        <CardBody>
             <img src={url} alt='from NASA' />
-
-            <h3 className='card-title'>{title}</h3>
-            <p className='img-text'>{explanation}</p>
-        </div>
+            <h3>{title}</h3>
+            <p>{explanation}</p>
+        </CardBody>
     )
 }
 
