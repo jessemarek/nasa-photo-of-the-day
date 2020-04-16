@@ -13,6 +13,7 @@ const Dropdown = styled.div`
 const Label = styled.label`
     margin: 0 3%;
     font-size: 2rem;
+    text-transform: capitalize;
 `
 
 const Select = styled.select`
@@ -31,7 +32,8 @@ const DropDownList = props =>{
             <Label>Choose a date:</Label>
 
             <Select onChange={props.onChange}>
-                <option value='2020-04-15'>Today</option>
+                <option value='2020-04-16'>Today</option>
+                <option value='2020-04-15'>Yesterday</option>
                 <option value='2020-03-09'>WEB 30 Start</option>
                 <option value='2020-02-08'>My Birthday</option>
                 
