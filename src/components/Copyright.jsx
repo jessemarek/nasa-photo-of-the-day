@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+//Styles for the component elements
 const CopyrightCredits = styled.p`
     text-align: left;
     font-size: 1.2rem;

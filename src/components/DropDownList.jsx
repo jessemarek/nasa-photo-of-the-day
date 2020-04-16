@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+//Styles for the component elements
 const Dropdown = styled.div`
     width: 50%;
     margin: 3% auto;
@@ -29,7 +30,7 @@ const DropDownList = props =>{
 
     return(
         <Dropdown>
-            <Label>Choose a date:</Label>
+            <Label>choose a date:</Label>
 
             <Select onChange={props.onChange}>
                 <option value='2020-04-16'>Today</option>

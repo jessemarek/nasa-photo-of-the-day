@@ -8,8 +8,10 @@ import axios from 'axios'
 const baseURL = 'https://api.nasa.gov'
 const api_key = 'drf7kPzOSXRGiQ98Bo9Fin8gfGZdVp14nLjjmkcR'
 
+
+//Styles for the component elements
 const AppContainer = styled.div`
-  text-align: center;
+  padding: 5%;
 `
 
 function App() {

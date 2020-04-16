@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ImageBody from './ImageBody'
 import Copyright from './Copyright'
 
+//Styles for the component elements
 const Container = styled.div`
     width: 50%;
     margin: 0 auto;

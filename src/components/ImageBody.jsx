@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
+//Styles for the component elements
 const CardBody = styled.div`
     img{
         width: 90%;
         margin: 5% auto;
+        border-radius: 7px;
     }
 
     h3{
