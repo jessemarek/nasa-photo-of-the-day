@@ -1,14 +1,47 @@
-import React from "react";
-import "./App.css";
+import React, { useState, useEffect } from "react";
+import styled from 'styled-components'
+import ImageCard from './components/ImageCard'
+import DropDownList from './components/DropDownList'
+import axios from 'axios'
+
+//BAse URL and my API key for NASA APOD
+const baseURL = 'https://api.nasa.gov'
+const api_key = 'drf7kPzOSXRGiQ98Bo9Fin8gfGZdVp14nLjjmkcR'
+
+
+//Styles for the component elements
+const AppContainer = styled.div`
+  padding: 5%;
+`
 
 function App() {
+
+  //State that will hold the image data and image date we will be using
+  const [imageData, setImageData] = useState(null)
+  const [imageDate, setImageDate] = useState('2020-04-16')
+
+  //watches for the select dropdown to change and then sets the imageDate accordingly
+  const changeHandler = event => setImageDate(event.target.value)
+
+  useEffect(()=>{
+    //Get data for the ImageCard from the API
+    axios.get(`${baseURL}/planetary/apod?api_key=${api_key}&date=${imageDate}`)
+      
+      .then(res => setImageData(res.data) //Set the imageData to the response from the .get() request
+      )
+      .catch(err => console.log('ERROR: ', err) //Catch the error if there is one and log it to the console
+      )
+  }, [imageDate])
+
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-    </div>
+    <AppContainer>
+      
+      <DropDownList onChange={changeHandler} date={imageDate} />
+      {
+        //Once the data has returned create a card with the data
+        imageData && <ImageCard imageData={imageData} />
+      }
+    </AppContainer>
   );
 }
 
